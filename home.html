@@ -6,26 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eyeSFX.com</title>
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./home.css"> <!-- Home css-->
 
+    <link rel="stylesheet" href="./signIn.html">
     <style>
         .top_navbar {
+            width: 100%;
             /* border: 1px solid teal; */
             display: flex;
             justify-content: space-around;
             font-size: 11px;
-            text-justify: auto;
             padding: 0px;
-            margin: 0px;
-            /* overflow: hidden;
-            position: fixed; */
+            margin: auto;
+            overflow: hidden;
+            position: fixed;
+            margin-top: -200px;
 
         }
 
         .Do_more_ul {
             /* margin: 0px; */
             padding-left: 0px;
-            ;
+
         }
 
         .Do_more_ul>a {
@@ -34,16 +36,27 @@
             color: black
         }
 
+        .Contact-us>a {
+            font-family: Arial, Helvetica, sans-serifs;
+            text-decoration: none;
+            color: black
+        }
+
         .logo_Navbar {
+            width: 100%;
             display: flex;
             align-items: center;
+            overflow: hidden;
+            position: fixed;
+            background-color: white;
+            margin-top: -160px;
+
 
         }
 
         .logo {
             width: 15%;
             margin-left: 1%;
-            border: 1px solid teal;
         }
 
         .search_and_number {
@@ -59,7 +72,6 @@
 
         }
 
-
         .searchItem {
             width: 75%;
             font-size: 15px;
@@ -70,6 +82,7 @@
             border: 1px solid black;
             margin-left: 7%;
             padding: 0px;
+            /* padding: 20px 8px 10px 8px; */
 
         }
 
@@ -77,19 +90,24 @@
             text-decoration: none;
             color: black;
             font-family: Arial, Helvetica, sans-serifs;
-            margin: 10px;
+            margin: 15px 0px 15px 0px;
+            padding: 15px 8px 15px 8px;
         }
 
         .navbar_eyeGlass {
             /* height: 50px; */
-            margin: 0px;
-            margin-top: 1%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             font-family: Arial, Helvetica, sans-serifs;
             align-items: baseline;
-            background-color: #FFFAF0;
             padding: 1%;
+            overflow: hidden;
+            position: fixed;
+            margin-top: -100px;
+            padding: -60px;
+            background-color: #FFFAF0;
+
         }
 
         .anchorTag {
@@ -110,6 +128,7 @@
         .Button_3 button {
             width: 90px;
             height: 40px;
+            margin-right: 25px;
             border: none;
             border-radius: 4px;
         }
@@ -119,7 +138,7 @@
             color: white;
             padding: 0px;
             font-size: 15px;
-            ;
+
         }
 
         .Button_3 button:nth-child(2) {
@@ -140,6 +159,7 @@
             height: auto;
             display: flex;
             font-size: 17px;
+            margin-top: 200px;
 
 
         }
@@ -156,6 +176,220 @@
             padding-left: 7%;
             padding-right: 7.6%;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .slideShow1 {
+            margin-top: 2%;
+        }
+
+        .image1 {
+            width: 100%;
+        }
+
+        .Body {
+
+            display: grid;
+            padding-left: 13%;
+            margin-top: 2%;
+            grid-template-columns: repeat(5, 15%);
+            text-align: center;
+            gap: 2%;
+        }
+
+        .Body img {
+            width: 100%;
+
+        }
+
+        .Body button {
+            width: 110px;
+            height: 40px;
+            color: white;
+            background-color: #4DB6AC;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .Body button :hover {
+            cursor: zoom-out;
+        }
+
+        .SlideShowDiv {
+            margin: 2% 0% 2% 0%;
+        }
+
+        .SlideShowImage {
+            width: 100%;
+        }
+
+        .second_last img {
+            width: 100%;
+            margin: 2% 0% 2% 0%;
+        }
+
+        .about_us {
+            background-color: #050A30;
+            color: white;
+            padding: 2% 5% 2% 5%;
+            line-height: 2;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .about_section {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 16% 16% 16% 52%);
+
+        }
+
+        .about_section a {
+
+            color: white;
+            text-decoration: none;
+        }
+
+        .download_app {
+            text-align: center;
+        }
+
+        .modal-sign-in {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+
+        .modal-content-sign-in {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            width: 30%;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .close-in {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-in:hover,
+        .close-in:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sign_in_content {
+            width: 100%;
+
+        }
+
+        .sign_in_content input {
+            width: 90%;
+            height: 30px;
+            padding-left: 15px;
+            font-size: 20px;
+            border-radius: 8px;
+            margin-bottom: 5%;
+            border: 1px solid gray;
+
+        }
+
+        .signIn_image {
+            width: 100%;
+        }
+
+        #login {
+            width: 70%;
+            height: 50px;
+            margin-left: 15%;
+            border-radius: 10px;
+            font-size: 20px;
+            border: none;
+            background-color: #B2EBF2;
+            margin-bottom: 7%;
+
+        }
+
+        .modal-sign-up {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content-sign-up {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            width: 30%;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+        }
+
+        .close-up {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-up:hover,
+        .close-up:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .sign_up_content {
+            width: 100%;
+
+        }
+
+        .sign_up_content input {
+            width: 90%;
+            height: 30px;
+            padding-left: 15px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 1px solid gray;
+            margin-bottom: 5%;
+            ;
+
+        }
+
+        #create-account {
+            width: 70%;
+            height: 50px;
+            margin-left: 15%;
+            border-radius: 10px;
+            font-size: 20px;
+            border: none;
+            background-color: #B2EBF2;
+            margin-top: 3%;
+            margin-bottom: 7%;
+
         }
     </style>
 </head>
@@ -180,7 +414,7 @@
             <a href="">│ EYESFX Optometrist-Partner-program</a>
 
         </ul>
-        <ul clas="Contact-us">
+        <ul class="Contact-us">
             <a href="">Contact US</a>
 
         </ul>
@@ -196,7 +430,8 @@
         </div>
         <div class="track_order_Sign_in_Wishlist">
             <a href="">Track Order</a>
-            <a href="">Sign in & Sign Up</a>
+            <a id="SignIn" href="">Sign in </a>&
+            <a id="SignUp" href="">Sign Up</a>
             <a href="">Wishlist</a>
             <a href="">Cart</a>
         </div>
@@ -218,6 +453,43 @@
         </div>
 
     </div>
+    <div id="signInModal" class="modal-sign-in">
+
+        <div class="modal-content-sign-in">
+            <span class="close-in">&times;</span>
+            <div class="sign_in_content">
+                <img class="signIn_image"
+                    src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg"
+                    alt="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg">
+                <h2>Sign In</h2>
+                <input type="text" id="Mobile-Number" placeholder="Enter mobile number">
+
+                <input type="text" id="Password" placeholder="Enter password">
+
+                <button id="login">Sign In</button>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="signUpModal" class="modal-sign-up">
+        <div class="modal-content-sign-up">
+            <span class="close-up"> &times;</span>
+            <div class="sign_up_content">
+
+                <h2>Create an Account</h2>
+                <input type="text" id="name" placeholder="Enter your name">
+                <input type="email" id="email" placeholder="Enter your email ">
+                <input type="number" id="mobile-number" placeholder="Enter your mobile number">
+                <input type="email" id="password" placeholder="Enter your password">
+                <button id="create-account">Create an Account</button>
+            </div>
+        </div>
+    </div>
+
     <div class="navbar_cool">
         <div>
             <H1>Cool Styles, Hot Deals</H1>
@@ -225,16 +497,154 @@
         <div>
             <H1>BUY 1 GET 1 WITH GOLD MEMBERSHIP</H1>
         </div>
+    </div>
+
+    <h1 style="text-align:center; color:gray ;">
+        <hr> Aquacolor - Glam Up With Color Lenses
+    </h1>
+    <hr>
+
+    <div id="slideImages">
+        <!-- Slide show of the images -->
+    </div>
+
+
+    <div class="Body">
+        <div>
+            <h1>WEAR <br> THE <br> TREND </h1>
+            <p style="margin-top: -20px; ">Our hottest collections</p>
+        </div>
+        <div>
+            <img src="https://static1.lenskart.com/media/desktop/img/Sep21/image179.png" alt="">
+            <h4>Round</h4>
+            <button>Explore</button>
+        </div>
+        <div>
+            <img src="https://static1.lenskart.com/media/desktop/img/Sep21/cateeye.jpg" alt="">
+            <h4>Cat-Eye</h4>
+            <button>Explore</button>
+        </div>
+        <div>
+            <img src="https://static1.lenskart.com/media/desktop/img/Sep21/clubmaster.jpg" alt="">
+            <h4>Clubmaster</h4>
+            <button>Explore</button>
+        </div>
+        <div>
+            <img src="https://static1.lenskart.com/media/desktop/img/Sep21/trans.jpg" alt="">
+            <h4>Transparent</h4>
+            <button>Explore</button>
+        </div>
+    </div>
+
+    <div class="slideShow1">
+        <img class="image1" src="https://static1.lenskart.com/media/desktop/img/Jan23/helios-plp/web%20banner.gif"
+            alt="">
+    </div>
+
+    <div class="second_last">
+        <img src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/whatsapp.png" alt="">
+    </div>
+
+    <div class="about_us">
+        <div class="about_para">
+            <h2>Buy The Best Eyewear From EYESFX</h2>
+            EYESFX Is The Leading E-Commerce Portal For Eyewear In India. It Has Revolutionised The Eyewear Industry In
+            The
+            Country With Its Omni-Channel Approach. From An Ever-Growing Number Of Offline Stores Across Major Cities In
+            The Country
+            To Innovative Integration Of Technology While Purchasing Online, EYESFX Caters To Every Customer With
+            Several Deals
+            And Offers. <br>
+
+            A One-Stop Online Solution For Purchasing Eyewear And Its Accessories, EYESFX Delivers Them Right At Your
+            Doorstep
+            With Convenient Methods Of Payment. Sunglasses As Well As Eyeglasses Are Available For Men And Women In A
+            Diverse Array
+            Of Styles And Trendy Colours. If You Want To Try Out Contact Lenses, Pick The Ones Of Your Choice From The
+            Extensive
+            Variety Of Coloured Contact Lenses From Our Online Store.
+        </div>
+
+        <div class="about_section">
+            <div>
+                <h3>Services</h3>
+                <a href="">Store Locator</a> <br>
+                <a href="">Enter My Power</a><br>
+                <a href="">Buying Guide</a><br>
+                <a href="">Frame Size</a><br>
+
+
+            </div>
+
+            <div>
+                <h3>About Us</h3>
+                <a href="">We Are Hiring</a> <br>
+                <a href="">Refer & Earn</a> <br>
+                <a href="">About Us</a> <br>
+                <a href="">EYESFX Coupons</a> <br>
+            </div>
+
+            <div>
+                <h3>Help</h3>
+                <a href="">FAQ's</a>
+            </div>
+
+            <div class="download_app">
+                <div>
+                    <img src="https://static.lenskart.com/media/desktop/img/play-store.svg" alt="">
+                    <img src="https://static.lenskart.com/media/desktop/img/app-store.svg" alt="">
+                </div>
+                <div>
+                    <p>Download EYESFX App to buy</p>
+                    <p>Eyeglasses, Sunglasses and Contact Lenses</p>
+                </div>
+            </div>
+
+
+        </div>
 
 
     </div>
 
 
-
-
-
 </body>
 
 <script src="./home.js"></script>
+<script>
+
+    let Name = document.getElementById("name")
+    let Email = document.getElementById("email")
+    let Mobile = document.getElementById("mobile-number")
+    let Password = document.getElementById("password")
+    let CreateAccocunt = document.getElementById("create-account")
+
+    let Customers = JSON.parse(localStorage.getItem("costumerDetails")) || []
+
+    CreateAccocunt.addEventListener(("click"), () => {
+
+        let name = Name.value
+        let email = Email.value
+        let mobile = Mobile.value
+        let password = Password.value
+
+        if (name != "" && email != "" && mobile != "" && password != "") {
+            let obj = { name, email, mobile, password }
+            Customers.push(obj)
+            Name.value = ""
+            Email.value = ""
+            Mobile.value = ""
+            Password.value = ""
+            localStorage.setItem("costumerDetails", JSON.stringify(Customers))
+        }
+        else {
+            alert("Please fill all the details !")
+        }
+
+    })
+
+
+
+
+</script>
 
 </html>
