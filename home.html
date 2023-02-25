@@ -12,6 +12,8 @@
 
 
     <link rel="stylesheet" href="./product.html">
+
+    <link rel="stylesheet" href="/wishlist.html">
     <style>
         .top_navbar {
             width: 100%;
@@ -606,12 +608,10 @@
         </div>
     </div>
 
-
 </body>
 
 <script src="./home.js"></script>
 <script>
-
 
     let Name = document.getElementById("name")
     let Email = document.getElementById("email")
@@ -620,7 +620,6 @@
     let CreateAccocunt = document.getElementById("create-account")
 
     let Customers = JSON.parse(localStorage.getItem("costumerDetails")) || []
-
     CreateAccocunt.addEventListener(("click"), () => {
         let name = Name.value
         let email = Email.value
@@ -644,9 +643,7 @@
     })
 
 
-
     let Login = document.getElementById("login")
-
     let SignInBtn = document.getElementById("login")
     let SignInMobile = document.getElementById("Mobile-Number")
     let SignInPassword = document.getElementById("Password")
@@ -667,8 +664,6 @@
             SignInMobile.value = ""
             SignInPassword.value = ""
         }
-
-
         else {
             alert("Make sure you have an account!")
         }

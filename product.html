@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eyes</title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/wishlist.html">
 
     <style>
         .top_navbar {
             width: 100%;
             /* border: 1px solid teal; */
+            background-color: white;
             display: flex;
             justify-content: space-around;
             font-size: 11px;
@@ -92,11 +94,14 @@
 
         .track_order_Sign_in_Wishlist {
             border: 1px solid black;
-            margin-left: 7%;
+            margin-left: 11%;
             padding: 0px;
             /* padding: 20px 8px 10px 8px; */
 
         }
+
+
+
 
         .track_order_Sign_in_Wishlist>a {
             text-decoration: none;
@@ -154,26 +159,66 @@
         #product {
             display: flex;
             border: 1px solid red;
-            margin-top: 80px;
+            margin-top: 150px;
         }
 
-        #filter {
-            width: 100%;
-            border: 1px solid blue;
-            padding: 2%;
-            margin-top: 170px;
-            /* padding: 5% 10% 5% 10%; */
-            ;
 
+
+        .filter-div {
+            border: 1px solid navy;
+            width: 25%;
+            margin-right: 5%;
+            margin-left: 2%;
+
+
+        }
+
+
+        .filter-div>div {
+            border: 1px solid teal;
+
+
+        }
+
+        /* #80CBC4 */
+
+        .refine,
+        .price,
+        .category,
+        .rating {
+            background-color: #E0F2F1;
+
+        }
+
+        .refine {
+            background-color: #B2DFDB;
+
+
+        }
+
+        #lowRange>img {
+            width: 80%;
+            /* margin: auto; */
+
+        }
+
+        #mediumRange>img {
+            width: 80%;
+        }
+
+        #highRange>img {
+            width: 80%;
         }
 
         #filter select {
-            width: 40%;
-            height: 50px;
-            /* margin: 5% 10% 5% 10%; */
-            font-size: 20px;
+            width: 90%;
+            height: 40px;
+            font-size: 13px;
             border-radius: 8px;
-            padding-left: 20px;
+            padding-left: 5%;
+            margin-bottom: 5%;
+            font-weight: bold;
+
         }
 
         #container {
@@ -181,7 +226,7 @@
             border: 1px solid teal;
             /* top: 100px; */
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             column-gap: 2%;
             row-gap: 10px;
         }
@@ -213,13 +258,12 @@
 
         }
 
-        .rating {
+        .ratingButton {
             width: 50%;
             height: 25px;
             padding: auto;
             margin-left: -1%;
             /* font-size: 15px; */
-
 
         }
 
@@ -272,9 +316,9 @@
         </div>
         <div class="track_order_Sign_in_Wishlist">
             <a href="">Track Order</a>
-            <a id="SignIn" href="">Sign in </a>&
-            <a id="SignUp" href="">Sign Up</a>
-            <a href="">Wishlist</a>
+            <a id="SignIn" href="">Sign out </a>&
+            <!-- <a id="SignUp" href="">Sign Up</a> -->
+            <a href="wishlist.html">Wishlist</a>
             <a href="">Cart</a>
         </div>
 
@@ -296,34 +340,80 @@
 
     </div>
 
-    <div id="filter">
-        <select name="" id="filterGender">
-            <option value="Category">Select Category</option>
-            <option value="Men">Men</option>
-            <option value="Women">Women</option>
-        </select>
-        <select name="" id="filterPrice">
-            <option value="Sort by price">Sort by price </option>
-            <option value="Low">Low to high</option>
-            <option value="High">High to low</option>
-        </select>
 
 
-
-    </div>
 
     <div id="product">
 
-        <!-- <div id="filter">
-            <h2>GENDER</h2>
-            <button id="men">Men</button>
-            <button id="women">Women</button>
-            <h2>SORT BY PRICE</h2>
-            <button id="low">Low to High</button>
-            <button id="high">High to Low</button>
+
+        <div class="filter-div">
+
+            <div class="refine">
+                <p>:: REFINE BY</p>
+            </div>
+
+            <div class="category">
+                <p>: CATEGORY</p>
+            </div>
+
+            <div class="categoryInp">
+                <p><input type="checkbox" value="All">All</p>
+                <p><input type="checkbox" value="Men">Men</p>
+                <p><input type="checkbox" value="Women">Women</p>
+            </div>
+
+            <div class="price">
+                <p>: PRICE</p>
+            </div>
+
+            <div class="priceInp">
+                <p><input type="checkbox" value="1500">Between 500 to 1500 Rs.</p>
+                <p><input type="checkbox" value="2500">Between 1500 to 3000 Rs.</p>
+                <p><input type="checkbox" value="3500">Above 3000 Rs.</p>
+            </div>
 
 
-        </div> -->
+
+
+            <div class="rating">
+                <p>: RATING</p>
+            </div>
+
+            <div class="ratingInp">
+                <p><input type="checkbox" value="3">Below 3.5</p>
+                <p><input type="checkbox" value="4">Below 4.0</p>
+                <p><input type="checkbox" value="5">Above 4.0</p>
+            </div>
+
+
+
+            <div id="filter">
+
+
+
+            </div class="imageRange">
+            <h3>Price Range</h3>
+
+            <div id="lowRange">
+                <img src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/Gunmetal-Black-Full-Rim-Aviator-Vincent-Chase-LIVEWIRE-VC-S14507-C1-Sunglasses_G_7196.jpg"
+                    alt="">
+                <h4>Under</h4>
+                <p>599-1599</p>
+            </div>
+            <div id="mediumRange">
+                <img src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/1325x636/9df78eab33525d08d6e5fb8d27136e95//v/i/silver-black-full-rim-rectangle-vincent-chase-met-effect-vc-s14939-c1-polarized-sunglasses_g_5105_28_07_2022.jpg"
+                    alt="">
+                <h4>Under</h4>
+                <p>1599-3999</p>
+            </div>
+            <div id="highRange">
+                <img src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/Silver-Black-Full-Rim-Rectangle-Vincent-Chase-VINTAGE-VC-S13969-C4-Polarized-Sunglasses_vincent-chase-vc-s13969-c4-sunglasses_sunglasses_sunglasses_g_630918_02_2022.jpg"
+                    alt="">
+                <h4>Under</h4>
+                <p>3999-7999</p>
+            </div>
+
+        </div>
 
         <div id="container">
             <!-- append all cards here -->
@@ -348,7 +438,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/copper-brown-full-rim-round-vincent-chase-sleek-steel-vc-e15069-c2-eyeglasses_g_3676_10_14_22.jpg",
-            name: "Gold Black Full Rim Square Eyeglasses",
+            name: "Gold Black Full Rim  Stylish Square Eyeglasses",
             price: 3400,
             gender: "Women",
             rating: 4.5,
@@ -356,7 +446,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_G_6717.jpg",
-            name: "Tortoise Full Rim Stylish Eyeglasses",
+            name: "Tortoise Full Rim Stylish Unique Eyeglasses",
             price: 999,
             gender: "Women",
             rating: 4.4,
@@ -364,7 +454,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//o/i/tortoise-full-rim-square-ojos21-ojos-oj-e14390-c2-eyeglasses_g_916926_02_2022.jpg",
-            name: "Tortoise Full Rim Square Eyeglasses",
+            name: "Tortoise Full Rim Square Unique Eyeglasses",
             price: 1999,
             gender: "Women",
             rating: 2.4,
@@ -372,7 +462,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13833-c1-suglasses_suglasses_g_6181.jpg",
-            name: "Brown Full Rim Wayfarer Eyeglasses",
+            name: "Brown Full Rim Wayfarer classic Unique Eyeglasses",
             price: 3999,
             gender: "Men",
             rating: 4.4,
@@ -380,7 +470,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s12938-c1-sunglasses_sunglasses_g_1928.jpg",
-            name: "Black Gold Full Rim Geometric Eyeglasses",
+            name: "Black Gold Full Rim Geometric  classic Eyeglasses",
             price: 2999,
             gender: "Men",
             rating: 4.4,
@@ -388,7 +478,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13137-c18-c18-sunglasses_vincent-chase-vc-s13137-c18-c18-sunglasses_sunglasses_G_6325.jpg",
-            name: "Silver Full Rim Hexagonal Eyeglasses",
+            name: "Silver Full Rim Hexagonal classic  Eyeglasses",
             price: 2199,
             gender: "Women",
             rating: 3.3,
@@ -396,7 +486,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/green-transparent-full-rim-round-lenskart-air-classic-la-e14532-c3-eyeglasses_g_9427.jpg",
-            name: "Black Half Rim Square Eyeglasses",
+            name: "Black Half Rim Square  classic Unique Eyeglasses",
             price: 2339,
             gender: "Men",
             rating: 3.4,
@@ -404,7 +494,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488307_02_2022.jpg",
-            name: "Silver Rimless Aviator Eyeglasses",
+            name: "Silver Rimless Aviator Classic Unique  Eyeglasses",
             price: 1299,
             gender: "Men",
             rating: 3.1,
@@ -412,7 +502,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-black-full-rim-rectangle-lenskart-air-classic-lenskart-air-la-e14922-c2-eyeglasses_g_6578_19_aug.jpg",
-            name: "Blue Full Rim Rectangle Eyeglasses",
+            name: "Blue Full Rim Rectangle  Classic Unique Eyeglasses",
             price: 4299,
             gender: "Women",
             rating: 3.4,
@@ -428,7 +518,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/gunmetal-grey-half-rim-aviator-lenskart-air-classic-la-e14641-c3-eyeglasses_g_4696_01_08_2022.jpg",
-            name: "Gunmetal Half Rim Aviator Eyeglasses",
+            name: "Gunmetal Half Rim Aviator Classic Unique  Eyeglasses",
             price: 4999,
             gender: "Men",
             rating: 3.4,
@@ -436,7 +526,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/gold-pink-gold-pink-full-rim-cat-eye-vincent-chase-sleek-steel-vc-e14711-c2-eyeglasses_g_2824_19_07_2022.jpg",
-            name: "Gold Pink Full Rim Cat Eye Eyeglasses",
+            name: "Gold Pink Full Rim Cat Eye  Classic Unique  Eyeglasses",
             price: 3999,
             gender: "Women",
             rating: 3.4,
@@ -444,7 +534,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/pink-transparent-black-full-rim-square-vincent-chase-classic-acetate-vc-e14724-c1-eyeglasses_csvfile-1652174476028-g_0722.jpg",
-            name: "Pink Transparent Full Rim Square Eyeglasses",
+            name: "Pink Transparent Full Rim Square Classic Unique  Eyeglasses",
             price: 2999,
             gender: "Men",
             rating: 3.5,
@@ -452,7 +542,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/transparent-black-full-rim-round-lenskart-air-flex-la-e14603-c1-eyeglasses_g_0781_10_05_2022.jpg",
-            name: "Transparent Full Rim Round Eyeglasses",
+            name: "Transparent Full Rim Round Classic Unique  Eyeglasses",
             price: 6999,
             gender: "Women",
             rating: 3.4,
@@ -460,7 +550,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/Black-Matte-Black-Maroon-Full-Rim-Cat-Eye-Lenskart-Air-Air-Wrap-LA-E14258-C2-Eyeglasses_lenskart-air-la-e14258-c2-eyeglasses_G_496707_02_2022.jpg",
-            name: "Black Full Rim Cat Eye Eyeglasses",
+            name: "Black Full Rim Cat Eye Classic Unique  Eyeglasses",
             price: 4999,
             gender: "Men",
             rating: 3.4,
@@ -468,7 +558,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s14078-c1-c1-sunglasses_G_7855_Image_PLA.jpg",
-            name: "Black Full Rim Square Sunglasses",
+            name: "Black Full Rim Square   Classic Unique Sunglasses",
             price: 3999,
             gender: "Women",
             rating: 3.4,
@@ -476,7 +566,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chose-vc-s13835-frll-rum-c3-sunglasses_sunglasses_g_3407_1.jpg",
-            name: "Brown Full Rim Aviator Sunglasses",
+            name: "Brown Full Rim AviatorClassic Unique  Sunglasses",
             price: 1999,
             gender: "Women",
             rating: 3.4,
@@ -484,7 +574,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13983-c1-sunglasses_sunglasses_sunglasses_g_7391.jpg",
-            name: "Gold Black Full Rim Aviator Sunglasses",
+            name: "Gold Black Full Rim Aviator Classic Unique Sunglasses",
             price: 4999,
             gender: "Women",
             rating: 3.7,
@@ -492,7 +582,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/gold-black-full-rim-aviator-vincent-chase-wired-up-vc-s13110-c11-polarized-sunglasses_g_3725_17_08_2022.jpg",
-            name: "Gold Full Rim Aviator Sunglasses",
+            name: "Gold Full Rim Aviator Classic Unique Sunglasses",
             price: 5699,
             gender: "Men",
             rating: 3.7,
@@ -500,7 +590,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/black-gold-full-rim-aviator-vincent-chase-glam-slam-vc-s15033-c1-polarized-sunglasses_g_4866_03_08_2022.jpg",
-            name: "Black Full Rim Aviator Sunglasses",
+            name: "Black Full Rim Aviator Classic Unique Sunglasses",
             price: 1999,
             gender: "Men",
             rating: 3.9,
@@ -508,7 +598,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s15407-c2-sunglasses_g_2748_07_02_2023.jpg",
-            name: "Brown Tortoise Full Rim Aviator Sunglasses",
+            name: "Brown Tortoise Full Rim Aviator Classic Unique  Sunglasses",
             price: 1699,
             gender: "Women",
             rating: 4.8,
@@ -516,7 +606,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s15408-c1-sunglasses_g_2698_07_02_2023.jpg",
-            name: "Gunmetal Black Full Rim Aviator Sunglasses",
+            name: "Gunmetal Black Full Rim Aviator Classic Unique  Sunglasses",
             price: 999,
             gender: "Men",
             rating: 3.8,
@@ -524,7 +614,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13202-c3-eyeglassses_eyeglassses_g_8261_1.jpg",
-            name: "Blue Block Screen Glasses",
+            name: "Blue Block Screen Glasses Classic Unique ",
             price: 1799,
             gender: "Men",
             rating: 4.5,
@@ -602,57 +692,26 @@
             rating: 3.2,
             count: 530,
         },
+
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13137-c18-c18-sunglasses_vincent-chase-vc-s13137-c18-c18-sunglasses_sunglasses_G_6325.jpg",
-            name: "Gold Full Rim Round Sunglasses",
-            price: 4999,
-            gender: "Men",
-            rating: 2.5,
-            count: 250,
-        },
-        {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s12938-c1-sunglasses_sunglasses_g_1928.jpg",
-            name: "Golden Full Rim Square Sunglasses",
-            price: 2399,
-            gender: "Women",
-            rating: 4.4,
-            count: 230,
-        },
-        {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//j/i/Gunmetal-Grey-Gradient-Full-Rim-Square-John-Jacobs-JJ-Tints-JJ-S12961-C1-Sunglasses_john-jacobs-jj-s12961-c1-sunglasses_sunglasses_g_3498_218_02_2022.jpg",
-            name: "Black Blue Full Rim Geometric Sunglasses",
-            price: 3999,
-            gender: "Men",
-            rating: 4.4,
-            count: 230,
-        },
-        {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_G_6717.jpg",
-            name: "Gold Full Rim Cat Eye Sunglasses",
-            price: 1999,
-            gender: "Women",
-            rating: 4.4,
-            count: 230,
-        },
-        {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/1325x636/9df78eab33525d08d6e5fb8d27136e95//v/i/_g_0633_06_05_2022.jpg",
-            name: "Vincent Chase Online",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13833-c1-suglasses_suglasses_g_6181.jpg",
+            name: "Vincent Chase Online Solid Black Sunglasses",
             price: 1400,
             gender: "Men",
             rating: 4.5,
             count: 160
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/1325x636/9df78eab33525d08d6e5fb8d27136e95//j/i/Silver-Full-Rim-Aviator-John-Jacobs-JJ-S_g_787615_02_2022.jpg",
-            name: "Gold Black Full Rim Square Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/copper-brown-full-rim-round-vincent-chase-sleek-steel-vc-e15069-c2-eyeglasses_g_3676_10_14_22.jpg",
+            name: "Gold Black Full Rim  Stylish Square Eyeglasses",
             price: 3400,
             gender: "Women",
             rating: 4.5,
             count: 160
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/_g_0009_07_07_2022.jpg",
-            name: "",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_G_6717.jpg",
+            name: "Tortoise Full Rim Stylish Unique Eyeglasses",
             price: 999,
             gender: "Women",
             rating: 4.4,
@@ -660,39 +719,39 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//o/i/tortoise-full-rim-square-ojos21-ojos-oj-e14390-c2-eyeglasses_g_916926_02_2022.jpg",
-            name: "Tortoise Full Rim Square Eyeglasses",
+            name: "Tortoise Full Rim Square Unique Eyeglasses",
             price: 1999,
             gender: "Women",
             rating: 2.4,
             count: 190,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e13196-c1-eyeglasses_g_3434.jpg",
-            name: "Brown Full Rim Wayfarer Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13833-c1-suglasses_suglasses_g_6181.jpg",
+            name: "Brown Full Rim Wayfarer classic Unique Eyeglasses",
             price: 3999,
             gender: "Men",
             rating: 4.4,
             count: 130,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13627-c5-eyeglasses_G_0829.jpg",
-            name: "Black Gold Full Rim Geometric Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s12938-c1-sunglasses_sunglasses_g_1928.jpg",
+            name: "Black Gold Full Rim Geometric  classic Eyeglasses",
             price: 2999,
             gender: "Men",
             rating: 4.4,
             count: 230,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-e14125-c1-c1-eyeglasses_G_1274.jpg",
-            name: "Silver Full Rim Hexagonal Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13137-c18-c18-sunglasses_vincent-chase-vc-s13137-c18-c18-sunglasses_sunglasses_G_6325.jpg",
+            name: "Silver Full Rim Hexagonal classic  Eyeglasses",
             price: 2199,
             gender: "Women",
             rating: 3.3,
             count: 140,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-gold-tortoise-half-rim-square-vincent-chase-sleek-steel-vc-e14873-c1-eyeglasses_g_1891_20_07_2022.jpg",
-            name: "Black Half Rim Square Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/green-transparent-full-rim-round-lenskart-air-classic-la-e14532-c3-eyeglasses_g_9427.jpg",
+            name: "Black Half Rim Square  classic Unique Eyeglasses",
             price: 2339,
             gender: "Men",
             rating: 3.4,
@@ -700,7 +759,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488307_02_2022.jpg",
-            name: "Silver Rimless Aviator Eyeglasses",
+            name: "Silver Rimless Aviator Classic Unique  Eyeglasses",
             price: 1299,
             gender: "Men",
             rating: 3.1,
@@ -708,7 +767,7 @@
         },
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-black-full-rim-rectangle-lenskart-air-classic-lenskart-air-la-e14922-c2-eyeglasses_g_6578_19_aug.jpg",
-            name: "Blue Full Rim Rectangle Eyeglasses",
+            name: "Blue Full Rim Rectangle  Classic Unique Eyeglasses",
             price: 4299,
             gender: "Women",
             rating: 3.4,
@@ -722,22 +781,96 @@
             rating: 3.4,
             count: 130,
         },
+
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/gunmetal-grey-half-rim-aviator-lenskart-air-classic-la-e14641-c3-eyeglasses_g_4696_01_08_2022.jpg",
-            name: "Gunmetal Half Rim Aviator Eyeglasses",
-            price: 4999,
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13833-c1-suglasses_suglasses_g_6181.jpg",
+            name: "Vincent Chase Online Solid Black Sunglasses",
+            price: 1400,
             gender: "Men",
-            rating: 3.4,
+            rating: 4.5,
+            count: 160
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/copper-brown-full-rim-round-vincent-chase-sleek-steel-vc-e15069-c2-eyeglasses_g_3676_10_14_22.jpg",
+            name: "Gold Black Full Rim  Stylish Square Eyeglasses",
+            price: 3400,
+            gender: "Women",
+            rating: 4.5,
+            count: 160
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_vincent-chase-vc-s14079-c3-c3-sunglasses_G_6717.jpg",
+            name: "Tortoise Full Rim Stylish Unique Eyeglasses",
+            price: 999,
+            gender: "Women",
+            rating: 4.4,
             count: 130,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/gold-pink-gold-pink-full-rim-cat-eye-vincent-chase-sleek-steel-vc-e14711-c2-eyeglasses_g_2824_19_07_2022.jpg",
-            name: "Gold Pink Full Rim Cat Eye Eyeglasses",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//o/i/tortoise-full-rim-square-ojos21-ojos-oj-e14390-c2-eyeglasses_g_916926_02_2022.jpg",
+            name: "Tortoise Full Rim Square Unique Eyeglasses",
+            price: 1999,
+            gender: "Women",
+            rating: 2.4,
+            count: 190,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13833-c1-suglasses_suglasses_g_6181.jpg",
+            name: "Brown Full Rim Wayfarer classic Unique Eyeglasses",
             price: 3999,
+            gender: "Men",
+            rating: 4.4,
+            count: 130,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s12938-c1-sunglasses_sunglasses_g_1928.jpg",
+            name: "Black Gold Full Rim Geometric  classic Eyeglasses",
+            price: 2999,
+            gender: "Men",
+            rating: 4.4,
+            count: 230,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-s13137-c18-c18-sunglasses_vincent-chase-vc-s13137-c18-c18-sunglasses_sunglasses_G_6325.jpg",
+            name: "Silver Full Rim Hexagonal classic  Eyeglasses",
+            price: 2199,
+            gender: "Women",
+            rating: 3.3,
+            count: 140,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/green-transparent-full-rim-round-lenskart-air-classic-la-e14532-c3-eyeglasses_g_9427.jpg",
+            name: "Black Half Rim Square  classic Unique Eyeglasses",
+            price: 2339,
+            gender: "Men",
+            rating: 3.4,
+            count: 230,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/Silver-Grey-Transparent-Black-Rimless-Aviator-Lenskart-Air-Flex-LA-E14019-C2-Eyeglasses_lenskart-air-la-e14019-c2-eyeglasses_G_488307_02_2022.jpg",
+            name: "Silver Rimless Aviator Classic Unique  Eyeglasses",
+            price: 1299,
+            gender: "Men",
+            rating: 3.1,
+            count: 130,
+        },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//l/i/blue-black-full-rim-rectangle-lenskart-air-classic-lenskart-air-la-e14922-c2-eyeglasses_g_6578_19_aug.jpg",
+            name: "Blue Full Rim Rectangle  Classic Unique Eyeglasses",
+            price: 4299,
             gender: "Women",
             rating: 3.4,
             count: 130,
         },
+        {
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e14168-c4-eyeglasses_vincent-chase-vc-e14168-c4-eyeglasses_G_4670.jpg",
+            name: "Gold Purple Tortoise Full Rim Cat Eye Eyeglasses",
+            price: 3199,
+            gender: "Women",
+            rating: 3.4,
+            count: 130,
+        },
+
         {
             image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/pink-transparent-black-full-rim-square-vincent-chase-classic-acetate-vc-e14724-c1-eyeglasses_csvfile-1652174476028-g_0722.jpg",
             name: "Pink Transparent Full Rim Square Eyeglasses",
@@ -915,7 +1048,8 @@
             count: 230,
         },
         {
-            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//j/i/Gunmetal-Grey-Gradient-Full-Rim-Square-John-Jacobs-JJ-Tints-JJ-S12961-C1-Sunglasses_john-jacobs-jj-s12961-c1-sunglasses_sunglasses_g_3498_218_02_2022.jpg",
+            image: "https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//j/o/john-jacobs-jj-s12961-c2-sunglasses_sunglasses_g_3380_2.jpg",
+
             name: "Black Blue Full Rim Geometric Sunglasses",
             price: 3999,
             gender: "Men",
@@ -934,8 +1068,11 @@
 
     let Box = document.getElementById("container")
 
-    function showData() {
-        for (let i = 0; i < EyeGlass.length; i++) {
+
+    let Wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+    function showData(data) {
+        data.forEach(element => {
             let Card = document.createElement("div")
             let Image = document.createElement("img")
             let Name = document.createElement("h4")
@@ -945,48 +1082,128 @@
             let Count = document.createElement("button")
             let Add = document.createElement("button")
 
-            Image.src = EyeGlass[i].image
-            Name.innerText = EyeGlass[i].name
-            Price.innerText = "₹ .  " + EyeGlass[i].price
-            Gender.innerText = "Category: " + EyeGlass[i].gender
-            Rating.innerText = EyeGlass[i].rating + "★★★★☆"
-            Count.innerText = EyeGlass[i].count + " Review"
+            Image.src = element.image
+            Name.innerText = element.name
+            Price.innerText = "₹ .  " + element.price
+            Gender.innerText = "Category: " + element.gender
+            Rating.innerText = element.rating + "★★★★☆"
+            Count.innerText = element.count + " Review"
             Add.innerText = "Add to cart"
 
             Card.append(Image, Name, Price, Gender, Rating, Count, Add)
             Box.append(Card)
 
+            Add.addEventListener("click", () => {
+                Wishlist.push(element)
+                localStorage.setItem("wishlist", JSON.stringify(Wishlist))
+            })
+
             Card.setAttribute("class", "card")
             Image.setAttribute("class", "image")
             Add.setAttribute("class", "addButton")
 
-            Rating.setAttribute("class", "rating")
+            Rating.setAttribute("class", "ratingButton")
             Count.setAttribute("class", "count")
+        });
 
-        }
+
+
     }
-    showData()
+    showData(EyeGlass)
+
+    let Gender = document.querySelectorAll(".categoryInp input")
+    let Rating = document.querySelectorAll(".ratingInp input")
+    let Price = document.querySelectorAll(".priceInp input")
 
 
-    let GenderFilter = document.getElementById("filterGender")
+    for (let i = 0; i < Gender.length; i++) {
 
-    let PriceFilter = document.getElementById("filterPrice")
+        Gender[i].addEventListener("change", () => {
+            Box.innerHTML = ""
+            let genderData = EyeGlass.filter((element) => {
+                if (element.gender == Gender[i].value) {
+                    // console.log(element)
+                    return element
+                }
 
-    GenderFilter.addEventListener("change", () => {
-        Box.innerHTML = ""
-
-        if (GenderFilter.value == "Men") {
-            let Men = EyeGlass.filter((element) => {
-                return element.gender == "Men"
             })
-            showData()
-            console.log(Men)
-        }
+            showData(genderData)
+            if (Gender[i].value == "All") {
+                showData(EyeGlass)
+
+            }
+
+        })
+    }
+
+    for (let i = 0; i < Rating.length; i++) {
+
+        Rating[i].addEventListener("change", () => {
+            Box.innerHTML = ""
+            if (Rating[i].value <= 3.5) {
+                let low = EyeGlass.filter((element) => {
+                    if (element.rating <= 3.5) {
+                        return element
+                    }
+                })
+                showData(low)
+            }
+            else if (Rating[i].value > 3.5 && Rating[i].value <= 4) {
+                let medium = EyeGlass.filter((element) => {
+                    if (element.rating > 3.5 && element.rating <= 4) {
+                        return element
+                    }
+                })
+                showData(medium)
+            }
+            else if (Rating[i].value >= 4) {
+                let high = EyeGlass.filter((element) => {
+                    if (element.rating >= 4) {
+                        return element
+                    }
+                })
+                showData(high)
+            }
+        })
+    }
+
+    for (let i = 0; i < Price.length; i++) {
+
+        Price[i].addEventListener("change", () => {
+            Box.innerHTML = ""
+            if (Price[i].value <= 1500) {
+                let lowPrice = EyeGlass.filter((element) => {
+                    if (element.price <= 1500) {
+                        return element
+                    }
+                })
+                showData(lowPrice)
+            }
+            else if (Price[i].value >= 1500 && Price[i].value <= 3000) {
+                let mediumPrice = EyeGlass.filter((element) => {
+                    if (element.price >= 1500 && element.price <= 3000) {
+                        return element
+                    }
+                })
+                showData(mediumPrice)
+            }
+            else if (Price[i].value >= 3000) {
+                let highPrice = EyeGlass.filter((element) => {
+                    if (element.price >= 3000) {
+                        return element
+                    }
+                })
+                showData(highPrice)
+            }
+        })
+    }
 
 
 
 
-    })
+
+
+
 
 
 
