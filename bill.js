@@ -30,10 +30,12 @@ function showData(data) {
         }
         Total.innerText = sum + " Rs."
         if (sum > 10000) {
-            discountTotal.innerText = sum + " Rs."
             discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
             Total.innerText = sum + " Rs."
+            discount.innerText = "20 % discount has been applied"
+
         }
+
 
         row.append(Sr, Name, Category, Price)
         Tbody.append(row)
@@ -44,10 +46,10 @@ function showData(data) {
 }
 showData(Wishlist)
 
+
 let Final = document.createElement("tr")
 
 let first = document.createElement("td")
-
 
 let total = document.createElement("td")
 let gender = document.createElement("td")
@@ -56,7 +58,10 @@ let price = document.createElement("td")
 first.innerText = ""
 total.innerText = "Total"
 gender.innerText = "-"
-price.innerText = discountTotal.innerText
+price.innerText = Total.innerText
 
-Final.append(first, discountTotal, gender, price)
+Final.append(first, total, gender, price)
 Tbody.append(Final)
+
+
+
