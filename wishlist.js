@@ -46,8 +46,8 @@ function showData(data) {
         }
         Total.innerText = sum + " Rs."
         if (sum > 10000) {
-            discountTotal.innerText = sum + " Rs."
-            Total.innerText = (Math.floor(sum * 0.80)) + " Rs."
+            discountTotal.innerText = (Math.floor(sum * 0.80)) + " Rs."
+            Total.innerText = sum + " Rs."
             discount.innerText = "20 % discount has been applied"
 
         }
