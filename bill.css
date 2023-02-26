@@ -1,0 +1,167 @@
+a:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #80CBC4;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+.logo_Navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    background-color: white;
+    margin: 0px;
+    top: 5px;
+}
+
+.navbar_eyeGlass {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serifs;
+    align-items: baseline;
+    overflow: hidden;
+    position: fixed;
+    margin: 0px;
+    top: 60px;
+    background-color: #FFFAF0;
+}
+
+.anchorTag {
+    width: 70%;
+    display: flex;
+    justify-content: baseline;
+    color: #1A237E;
+    font-size: 15px;
+    align-items: baseline;
+
+}
+
+.anchorTag a {
+    padding: 1%;
+    text-decoration: none;
+}
+
+.Do_more_ul {
+    /* margin: 0px; */
+    padding-left: 0px;
+
+}
+
+.Do_more_ul>a {
+    font-family: Arial, Helvetica, sans-serifs;
+    text-decoration: none;
+    color: black
+}
+
+.Contact-us>a {
+    font-family: Arial, Helvetica, sans-serifs;
+    text-decoration: none;
+    color: black
+}
+
+
+.logo {
+    width: 15%;
+    margin-left: 1%;
+}
+
+.search_and_number {
+    width: 45%;
+    display: flex;
+
+}
+
+.number {
+    width: 23%;
+    margin-left: 8%;
+    padding-right: 2%;
+
+
+}
+
+.searchItem {
+    width: 75%;
+    font-size: 15px;
+}
+
+.track_order_Sign_in_Wishlist {
+    margin-left: 6%;
+    padding: 10px;
+    /* padding: 20px 8px 10px 8px; */
+
+}
+
+.track_order_Sign_in_Wishlist>a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serifs;
+    margin: 15px 0px 15px 0px;
+    padding: 15px 8px 15px 8px;
+
+
+}
+
+#SignOut {
+    background-color: #E53935;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+#Product {
+    background-color: #4DB6AC;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+
+#contanier {
+    border: 1px solid teal;
+    width: 50%;
+    margin: auto;
+    margin-top: 130px;
+    padding: 5%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+
+}
+
+table {
+    width: 100%;
+    ;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+#billBar {
+    display: flex;
+    width: 100%;
+
+}
+
+.image {
+    width: 30%;
+}
+
+p,
+h3,
+h4 {
+    padding: 3px;
+    margin: 0px;
+}
