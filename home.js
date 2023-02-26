@@ -66,3 +66,74 @@ window.onclick = function (event) {
         SignUpModal.style.display = "none";
     }
 }
+
+
+let Name = document.getElementById("name")
+let Email = document.getElementById("email")
+let Mobile = document.getElementById("mobile-number")
+let Password = document.getElementById("password")
+let CreateAccocunt = document.getElementById("create-account")
+
+
+let SIGNUP = document.getElementById("SIGNUP")
+
+let Customers = JSON.parse(localStorage.getItem("costumerDetails")) || []
+
+CreateAccocunt.addEventListener(("click"), () => {
+    let name = Name.value
+    let email = Email.value
+    let mobile = Mobile.value
+    let password = Password.value
+
+    if (name != "" && email != "" && mobile != "" && password != "") {
+        let obj = { name, email, mobile, password }
+        Customers.push(obj)
+
+
+
+        // let Div = document.createElement("button")
+        // Div.innerText = "You have signed up succesfully"
+        // Div.append(SIGNUP)
+
+        Name.innerHTML = ""
+        Email.innerHTML = ""
+        Mobile.innerHTML = ""
+        Password.innerHTML = ""
+
+        localStorage.setItem("costumerDetails", JSON.stringify(Customers))
+        alert("Signed up successfully")
+        window.location = "product.html"
+    }
+    else {
+        alert("Please fill all the details !")
+    }
+
+})
+
+let Login = document.getElementById("login")
+let SignInBtn = document.getElementById("login")
+let SignInMobile = document.getElementById("Mobile-Number")
+let SignInPassword = document.getElementById("Password")
+let Clear = document.getElementsByClassName("sign_in_content")
+
+SignInBtn.addEventListener("click", () => {
+
+    let flag = false
+    for (let i = 0; i < Customers.length; i++) {
+        if (Customers[i].mobile == SignInMobile.value && Customers[i].password == SignInPassword.value) {
+            flag = true
+            break
+
+        }
+    }
+    if (flag == true) {
+        alert("You have Sign up successfully")
+        window.location = "product.html"
+        SignInMobile.value = ""
+        SignInPassword.value = ""
+    }
+    else {
+        alert("Make sure you have an account!")
+    }
+
+})
