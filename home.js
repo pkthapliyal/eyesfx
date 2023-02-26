@@ -90,11 +90,6 @@ CreateAccocunt.addEventListener(("click"), () => {
         Customers.push(obj)
 
 
-
-        // let Div = document.createElement("button")
-        // Div.innerText = "You have signed up succesfully"
-        // Div.append(SIGNUP)
-
         Name.innerHTML = ""
         Email.innerHTML = ""
         Mobile.innerHTML = ""
@@ -127,7 +122,7 @@ SignInBtn.addEventListener("click", () => {
         }
     }
     if (flag == true) {
-        alert("You have Sign up successfully")
+        alert("You have Sign in successfully")
         window.location = "product.html"
         SignInMobile.value = ""
         SignInPassword.value = ""
