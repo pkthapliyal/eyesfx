@@ -7,6 +7,6 @@ Deployed link : https://eyesfx.netlify.app/
 
 # Tech Stack
 
-<i class="ci-html5"> </i>
+<img src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png" height="100">
           
           
