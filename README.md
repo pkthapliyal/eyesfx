@@ -7,6 +7,6 @@ Deployed link : https://eyesfx.netlify.app/
 
 # Tech Stack
 
-<i class="\f015"> </i>
+<i class="ci-html5"> </i>
           
           
